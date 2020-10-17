@@ -1,0 +1,182 @@
+/* ドロイド君 */
+.droid {
+  margin: 50px;
+}
+
+/* ドロイド君の頭 */
+.droid__head {
+  width: 100px;
+  height: 50px;
+  border-radius: 100px 100px 0 0;
+  background: #a0c437;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 0;
+}
+
+.droid__eye {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.droid__eye::before,
+.droid__eye::after {
+  top: 25px;
+  left: 20px;
+  width: 13px;
+  height: 13px;
+  border-radius: 10px;
+  background: #ffffff;
+  content: "";
+  position: absolute;
+}
+
+.droid__eye::after {
+  right: 45px;
+  left: 65px;
+  border-radius: 10px;
+  animation: blink-r infinite 7s;
+}
+
+.droid__eye::before {
+  animation: blink-l infinite 7s;
+}
+
+.droid__antenna {
+  position: relative;
+  z-index: 1;
+}
+
+.droid__antenna::before,
+.droid__antenna::after {
+  border: 1px solid #a0c437;
+  top: px;
+  left: 15px;
+  width: 15px;
+  background: #a0c437;
+  transform: rotate(50deg);
+  content: "";
+  position: absolute;
+}
+
+.droid__antenna::after {
+  left: 70px;
+  transform: rotate(-50deg);
+}
+
+.droid__body {
+  width: 100px;
+  height: 100px;
+  background: #a0c437;
+  border-radius: 0 0 5px 5px / 0 0 5px 5px;
+}
+
+.droid__hand {
+  z-index: 1;
+  position: relative;
+}
+
+.droid__hand::before,
+.droid__hand::after {
+  left: -25px;
+  width: 20px;
+  height: 77px;
+  background: #a0c437;
+  border-radius: 20px/ 20px;
+  content: "";
+  position: absolute;
+}
+
+.droid__hand::after {
+  left: 105px;
+  border-radius: 20px/ 20px;
+}
+
+.droid__leg {
+  position: relative;
+  z-index: 1;
+}
+
+.droid__leg::before,
+.droid__leg::after {
+  top: 50px;
+  left: 10px;
+  width: 20px;
+  height: 77px;
+  background: #a0c437;
+  border-radius: 20px/ 20px;
+  content: "";
+  position: absolute;
+}
+
+.droid__leg::after {
+  left: 70px;
+  border-radius: 20px/ 20px;
+}
+
+@keyframes blink-r {
+  0% {
+    transform: rotate(180deg) scaleY(1);
+  }
+  1% {
+    transform: rotate(180deg) scaleY(0);
+  }
+  2% {
+    transform: rotate(180deg) scaleY(1);
+  }
+  50% {
+    transform: rotate(180deg) scaleY(1);
+  }
+  51% {
+    transform: rotate(180deg) scaleY(0);
+  }
+  52% {
+    transform: rotate(180deg) scaleY(1);
+  }
+  53% {
+    transform: rotate(180deg) scaleY(1);
+  }
+  54% {
+    transform: rotate(180deg) scaleY(0);
+  }
+  55% {
+    transform: rotate(180deg) scaleY(1);
+  }
+  100% {
+    transform: rotate(90deg) scaleY(1);
+  }
+}
+
+@keyframes blink-l {
+  0% {
+    transform: rotate(180deg) scaleY(1);
+  }
+  1% {
+    transform: rotate(180deg) scaleY(0);
+  }
+  2% {
+    transform: rotate(180deg) scaleY(1);
+  }
+  50% {
+    transform: rotate(180deg) scaleY(1);
+  }
+  51% {
+    transform: rotate(180deg) scaleY(0);
+  }
+  52% {
+    transform: rotate(180deg) scaleY(1);
+  }
+  53% {
+    transform: rotate(180deg) scaleY(1);
+  }
+  54% {
+    transform: rotate(180deg) scaleY(0);
+  }
+  55% {
+    transform: rotate(180deg) scaleY(1);
+  }
+  100% {
+    transform: rotate(90deg) scaleY(1);
+  }
+}
